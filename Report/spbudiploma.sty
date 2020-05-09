@@ -1,24 +1,10 @@
-% --------------------- Стандарт СПбГУ для ВКР --------------------------
-% Автор: Тоскин Николай, itonik@me.com
-% Если заметили ошибку, напишите на email
-% Если хотите добавить изменение самостоятельно, GitHub: . PR-s welcome!
-% Использованы материалы:
-% habr.com/ru/post/144648/
-% cpsconf.ru
-% meta.math.spbu.ru/ru/template.shtml
-% Текст:
-% http://edu.spbu.ru/images/data/normativ_acts/local/20181030_10432_1.pdf
-% Титульный лист:
-% http://edu.spbu.ru/images/data/normativ_acts/local/20180703_6616_1.pdf
-% -----------------------------------------------------------------------
-
-% Глобальные поля
 \usepackage[left=30mm, top=20mm, right=15mm, bottom=20mm,nohead, includefoot,footskip=35pt]{geometry}
 
 % Язык, кодировка, шрифт
 \usepackage[utf8]{inputenc}
 \usepackage[T2A]{fontenc}
 \usepackage[english,russian]{babel}
+\renewcommand{\rmdefault}{Tempora-TLF}
 
 % Межстрочный интервал = 1.5pt
 \usepackage{setspace}
@@ -30,25 +16,26 @@
 
 % Пакет для содержания
 \usepackage{tocloft}
-
+    
 % Команда для специальных разделов (введение, обзор литературы, etc)
 % Не нумеруются в содержании, по уровню вложенности: 
 \newcommand{\specialsection}[1]{
     \phantomsection
-    \bigskip\smallskip\hspace{-12.5mm}
+    \bigskip\smallskip\hspace{-13.8mm}
     \normalfont\fontsize{18}{18}\textbf{#1}
     \par\bigskip\normalfont\normalsize
     \addcontentsline{toc}{section}{#1}
-}
-
+    }
+    
 % Размеры заголовков разделов и подразделов
 \usepackage{titlesec}
 % Раздел: 18pt, добавляем слово "Глава"
 \titleformat{\section}
-{\normalfont\fontsize{18}{18}\bfseries}{Глава \thesection. \hskip-1em}{1em}{}
+{\fontsize{18}{18}\bfseries}{
+\hspace{-1.5mm}Глава \thesection. \hskip-1em}{1em}{}
 % Подраздел: 16pt
 \titleformat{\subsection}
-{\normalfont\fontsize{16}{16}\bfseries}{\thesubsection}{1em}{}
+{\fontsize{16}{16}\bfseries}{\hspace{-0.2mm}\thesubsection}{1em}{}
 
 % Сожержание
 % Выравнивание заголовка по центру (да, да, хак с отступом слева \hspace{0.31\textwidth})
